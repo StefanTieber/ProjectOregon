@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MyButton from './MyButton.js';
 import React from "react";
 
 class App extends React.Component {
@@ -13,6 +14,11 @@ class App extends React.Component {
     }
 
     componentDidMount() {
+        this.fetchInsult();
+    }
+
+    fetchInsult = () => {
+    console.log(this);
         fetch("http://localhost:8080/insult")
             .then(res => res.json())
             .then(
@@ -23,9 +29,6 @@ class App extends React.Component {
                     });
                     console.log(result);
                 },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
                 (error) => {
                     this.setState({
                         isLoaded: true,
@@ -43,6 +46,7 @@ class App extends React.Component {
                     <p>
                         Schmidi ist ein {this.state.insult}
                     </p>
+                    <button onClick={this.fetchInsult}>Neue Beleidigung</button>
                 </header>
             </div>
         );
