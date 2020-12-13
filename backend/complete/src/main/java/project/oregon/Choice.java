@@ -1,8 +1,13 @@
-package oregon;
+package project.oregon;
 
 public class Choice {
     private int id;
     private String choice;
+
+    public Choice(int id, String choice) {
+        this.id = id;
+        this.choice = choice;
+    }
 
     public int getId() {
         return id;
