@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import AjaxService from './AjaxService.js';
+import BackendService from './BackendService.js';
 import Prompt from './Prompt.js';
 import React from "react";
 
@@ -21,7 +21,7 @@ class App extends React.Component {
     }
 
     getPrompt = () => {
-        AjaxService.get("prompt")
+        BackendService.get("prompt")
             .then((result) => {
                 this.setState({
                     isLoaded: true,
@@ -31,7 +31,7 @@ class App extends React.Component {
     }
 
     choose = (id) => {
-        AjaxService.send("choose", {id: id})
+        BackendService.send("choose", {id: id})
             .then(() => {
                 this.getPrompt();
             });

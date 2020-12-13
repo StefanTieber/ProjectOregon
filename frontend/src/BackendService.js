@@ -1,6 +1,6 @@
 import * as _ from 'lodash';
 
-class _AjaxService {
+class _BackendService {
     url = 'http://192.168.1.111:8080/';
 
     fetch(resource, options) {
@@ -70,6 +70,6 @@ class _AjaxService {
     }
 }
 
-const AjaxService = new _AjaxService();
+const BackendService = new _BackendService();
 
-export default AjaxService;
+export default BackendService;
