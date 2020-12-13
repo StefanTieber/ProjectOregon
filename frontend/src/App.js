@@ -30,8 +30,11 @@ class App extends React.Component {
             })
     }
 
-    choose(id){
-        console.log(id);
+    choose = (id) => {
+        AjaxService.send("choose", {id: id})
+            .then(() => {
+                this.getPrompt();
+            });
     }
 
     render() {
