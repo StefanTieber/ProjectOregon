@@ -1,24 +1,20 @@
-package project.oregon;
+package project.oregon.models;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Prompt {
     private String question;
-    private List<Choice> choices = new ArrayList<>();
+    private List<Choice> choices;
 
     public Prompt(String question, List<Choice> choices) {
         this.question = question;
         this.choices = choices;
     }
 
-    public Prompt(String question, String... choiceStrings) {
+    public Prompt(String question, Choice... choices) {
         this.question = question;
-        int id = 1;
-        for (String choice : choiceStrings) {
-            this.choices.add(new Choice(id, choice));
-            id++;
-        }
+        this.choices = Arrays.asList(choices);
     }
 
     public String getQuestion() {

@@ -1,19 +1,19 @@
-package project.oregon;
+package project.oregon.models;
 
 public class Choice {
-    private int id;
+    private String id;
     private String choice;
 
-    public Choice(int id, String choice) {
+    public Choice(String id, String choice) {
         this.id = id;
         this.choice = choice;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
