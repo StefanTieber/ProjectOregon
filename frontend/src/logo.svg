@@ -1,7 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg"
 width="500" height="500">
   <g>
-    <circle cx="50%" cy="20%" r="14%">
+    <path d="
+    M 209.6  30
+    L 290.4  30
+    L 330.8 100
+    L 290.4 170
+    L 209.6 170
+    L 169.2 100
+    L 209.6  30
+    Z">
       <animateTransform
         attributeName="transform"
         attributeType="XML"
@@ -19,8 +27,16 @@ width="500" height="500">
         dur="30s"
         repeatCount="indefinite"
       />
-    </circle>
-    <circle cx="50%" cy="20%" r="14%">
+    </path>
+    <path d="
+    M 209.6  30
+    L 290.4  30
+    L 330.8 100
+    L 290.4 170
+    L 209.6 170
+    L 169.2 100
+    L 209.6  30
+    Z">
       <animateTransform
         attributeName="transform"
         attributeType="XML"
@@ -38,8 +54,16 @@ width="500" height="500">
         dur="30s"
         repeatCount="indefinite"
       />
-    </circle>
-    <circle cx="50%" cy="20%" r="14%">
+    </path>
+    <path d="
+    M 209.6  30
+    L 290.4  30
+    L 330.8 100
+    L 290.4 170
+    L 209.6 170
+    L 169.2 100
+    L 209.6  30
+    Z">
       <animateTransform
         attributeName="transform"
         attributeType="XML"
@@ -57,8 +81,16 @@ width="500" height="500">
         dur="30s"
         repeatCount="indefinite"
       />
-    </circle>
-    <circle cx="50%" cy="20%" r="14%">
+    </path>
+    <path d="
+    M 209.6  30
+    L 290.4  30
+    L 330.8 100
+    L 290.4 170
+    L 209.6 170
+    L 169.2 100
+    L 209.6  30
+    Z">
       <animateTransform
         attributeName="transform"
         attributeType="XML"
@@ -76,8 +108,16 @@ width="500" height="500">
         dur="30s"
         repeatCount="indefinite"
       />
-    </circle>
-    <circle cx="50%" cy="20%" r="14%">
+    </path>
+    <path d="
+    M 209.6  30
+    L 290.4  30
+    L 330.8 100
+    L 290.4 170
+    L 209.6 170
+    L 169.2 100
+    L 209.6  30
+    Z">
       <animateTransform
         attributeName="transform"
         attributeType="XML"
@@ -95,8 +135,16 @@ width="500" height="500">
         dur="30s"
         repeatCount="indefinite"
       />
-    </circle>
-    <circle cx="50%" cy="20%" r="14%">
+    </path>
+    <path d="
+    M 209.6  30
+    L 290.4  30
+    L 330.8 100
+    L 290.4 170
+    L 209.6 170
+    L 169.2 100
+    L 209.6  30
+    Z">
       <animateTransform
         attributeName="transform"
         attributeType="XML"
@@ -114,6 +162,6 @@ width="500" height="500">
         dur="30s"
         repeatCount="indefinite"
       />
-    </circle>
+    </path>
   </g>
 </svg>
