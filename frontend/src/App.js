@@ -1,52 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
-import MyButton from './MyButton.js';
+import AjaxService from './AjaxService.js';
+import Prompt from './Prompt.js';
 import React from "react";
 
 class App extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
             error: null,
             isLoaded: false,
-            insult: ""
+            insult: "",
+            prompt: {}
         };
     }
 
     componentDidMount() {
-        this.fetchInsult();
+        this.getPrompt();
     }
 
-    fetchInsult = () => {
-    console.log(this);
-        fetch("http://localhost:8080/insult")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    this.setState({
-                        isLoaded: true,
-                        insult: result.content
-                    });
-                    console.log(result);
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
-                }
-            )
+    getPrompt = () => {
+        AjaxService.get("prompt")
+            .then((result) => {
+                this.setState({
+                    isLoaded: true,
+                    prompt : {question: result.question, choices: result.choices}
+                });
+            })
+    }
+
+    choose(id){
+        console.log(id);
     }
 
     render() {
         return (
             <div className="App">
-                <header className="App-header">
+                <header className="App-header p-5">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Schmidi ist ein {this.state.insult}
-                    </p>
-                    <button onClick={this.fetchInsult}>Neue Beleidigung</button>
+
+                    {this.state.isLoaded ? <Prompt prompt={this.state.prompt} onClick={this.choose}/> : null}
                 </header>
             </div>
         );
