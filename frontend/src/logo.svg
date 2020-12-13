@@ -1,15 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-width="300" height="300">
-  <rect x="5%" y="5%" width="40%" height="40%" rx="10" ry="10">
-    <animate attributeName="fill" values="#ff9393;#ab93ff;#ab93ff;#ab93ff;#ab93ff;#93d3ff;#93d3ff;#93d3ff;#93d3ff;#93ff93;#93ff93;#93ff93;#93ff93;#fffb93;#fffb93;#fffb93;#fffb93;#ff9393;#ff9393;#ff9393;#ff9393;" dur="30s" repeatCount="indefinite" />
-  </rect>
-  <rect x="55%" y="5%" width="40%" height="40%" rx="10" ry="10">
-    <animate attributeName="fill" values="#fffb93;#fffb93;#ff9393;#ff9393;#ff9393;#ff9393;#ab93ff;#ab93ff;#ab93ff;#ab93ff;#93d3ff;#93d3ff;#93d3ff;#93d3ff;#93ff93;#93ff93;#93ff93;#93ff93;#fffb93;#fffb93;#fffb93;" dur="30s" repeatCount="indefinite" />
-  </rect>
-  <rect x="55%" y="55%" width="40%" height="40%" rx="10" ry="10">
-    <animate attributeName="fill" values="#93ff93;#93ff93;#93ff93;#fffb93;#fffb93;#fffb93;#fffb93;#ff9393;#ff9393;#ff9393;#ff9393;#ab93ff;#ab93ff;#ab93ff;#ab93ff;#93d3ff;#93d3ff;#93d3ff;#93d3ff;#93ff93;#93ff93;" dur="30s" repeatCount="indefinite" />
-  </rect>
-  <rect x="5%" y="55%" width="40%" height="40%" rx="10" ry="10">
-    <animate attributeName="fill" values="#93d3ff;#93d3ff;#93d3ff;#93d3ff;#93ff93;#93ff93;#93ff93;#93ff93;#fffb93;#fffb93;#fffb93;#fffb93;#ff9393;#ff9393;#ff9393;#ff9393;#ab93ff;#ab93ff;#ab93ff;#ab93ff;#93d3ff;" dur="30s" repeatCount="indefinite" />
-  </rect>
+width="500" height="500">
+  <g>
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="360 250 250"
+      to="0 250 250"
+      dur="30s"
+      repeatCount="indefinite"
+    />
+    <rect
+      x="18%"
+      y="18%"
+      width="28%"
+      height="28%"
+      rx="10"
+      ry="10"
+    >
+      <animate
+        attributeName="fill"
+        values="#ff9393;#ab93ff;#93d3ff;#93ff93;#fffb93;#ff9393;"
+        begin="-22.5s"
+        dur="30s"
+        repeatCount="indefinite"
+      />
+    </rect>
+    <rect
+      x="54%"
+      y="18%"
+      width="28%"
+      height="28%"
+      rx="10"
+      ry="10"
+    >
+      <animate
+        attributeName="fill"
+        values="#ff9393;#ab93ff;#93d3ff;#93ff93;#fffb93;#ff9393;"
+        begin="-15s"
+        dur="30s"
+        repeatCount="indefinite"
+      />
+    </rect>
+    <rect
+      x="54%"
+      y="54%"
+      width="28%"
+      height="28%"
+      rx="10"
+      ry="10"
+    >
+      <animate
+        attributeName="fill"
+        values="#ff9393;#ab93ff;#93d3ff;#93ff93;#fffb93;#ff9393;"
+        begin="-7.5s"
+        dur="30"
+        repeatCount="indefinite"
+      />
+    </rect>
+    <rect
+      x="18%"
+      y="54%"
+      width="28%"
+      height="28%"
+      rx="10"
+      ry="10"
+    >
+      <animate
+        attributeName="fill"
+        values="#ff9393;#ab93ff;#93d3ff;#93ff93;#fffb93;#ff9393;"
+        begin="0s"
+        dur="30s"
+        repeatCount="indefinite"
+      />
+    </rect>
+  </g>
 </svg>
