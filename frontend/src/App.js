@@ -8,16 +8,26 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
+        BackendService.init('http://localhost:8080/');
         this.state = {
             error: null,
             isLoaded: false,
-            insult: "",
+            score: 0,
             prompt: {}
         };
     }
 
     componentDidMount() {
         this.getPrompt();
+    }
+
+    getScore = () => {
+        BackendService.get("getScore")
+            .then((result) => {
+                this.setState({
+                    score: result.number
+                });
+            })
     }
 
     getPrompt = () => {
@@ -33,6 +43,7 @@ class App extends React.Component {
     choose = (id) => {
         BackendService.send("choose", {id: id})
             .then(() => {
+                this.getScore();
                 this.getPrompt();
             });
     }
@@ -41,7 +52,10 @@ class App extends React.Component {
         return (
             <div className="App">
                 <header className="App-header p-5">
-                    <img src={logo} className="App-logo" alt="logo"/>
+                    <div className="container">
+                        <img src={logo} className="App-logo" alt="logo"/>
+                        <div className="centered score">{this.state.score}</div>
+                    </div>
 
                     {this.state.isLoaded ? <Prompt prompt={this.state.prompt} onClick={this.choose}/> : null}
                 </header>

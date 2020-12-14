@@ -1,7 +1,11 @@
 import * as _ from 'lodash';
 
 class _BackendService {
-    url = 'http://192.168.1.111:8080/';
+    url = '';
+
+    init(url) {
+        this.url = url;
+    }
 
     fetch(resource, options) {
         let usedOptions = {
