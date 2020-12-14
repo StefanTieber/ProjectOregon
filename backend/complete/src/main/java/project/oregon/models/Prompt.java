@@ -4,15 +4,21 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Prompt {
-    private String question;
-    private List<Choice> choices;
+    public String questionId;
+    public String question;
+    public List<Choice> choices;
 
-    public Prompt(String question, List<Choice> choices) {
+    public Prompt() {
+    }
+
+    public Prompt(String questionId, String question, List<Choice> choices) {
+        this.questionId = questionId;
         this.question = question;
         this.choices = choices;
     }
 
-    public Prompt(String question, Choice... choices) {
+    public Prompt(String questionId, String question, Choice... choices) {
+        this.questionId = questionId;
         this.question = question;
         this.choices = Arrays.asList(choices);
     }
@@ -31,5 +37,17 @@ public class Prompt {
 
     public List<Choice> getChoices() {
         return choices;
+    }
+
+    public String getQuestionId() {
+        return questionId;
+    }
+
+    public void setQuestionId(String questionId) {
+        this.questionId = questionId;
+    }
+
+    public Prompt choose(String choice) {
+        return null;
     }
 }

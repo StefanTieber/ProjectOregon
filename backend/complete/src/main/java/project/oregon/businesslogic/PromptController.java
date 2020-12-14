@@ -1,36 +1,24 @@
 package project.oregon.businesslogic;
 
 import org.springframework.stereotype.Service;
-import project.oregon.factories.PromptFactory;
 import project.oregon.models.Prompt;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import project.oregon.constants.ChoiceIds;
+import project.oregon.prompts.*;
 
 @Service
 public class PromptController {
-    private List<String> choices = new ArrayList<>();
-    private String lastChoice;
+    public static List<String> choices = new ArrayList<>();
+    private Prompt prompt = new NeutralEat();
 
     public Prompt getPrompt() {
-        if (choices.isEmpty()) {
-            return PromptFactory.getNeutralEatPrompt();
-        } else {
-            if (lastChoice.equals(ChoiceIds.ID_WASCHMASCHINE_JA)) {
-                return PromptFactory.getWashmachineEatPrompt();
-            }
-            if (choices.size() % 2 == 1) {
-                return PromptFactory.getWashmachinePrompt();
-            } else {
-                return PromptFactory.getNoWashmachineEatPrompt();
-            }
-        }
+        return prompt;
     }
 
-    public void choose(String id) {
-        choices.add(id);
-        lastChoice = id;
+    public void choose(String choice) {
+        choices.add(choice);
+        prompt = prompt.choose(choice);
     }
 }
