@@ -8,7 +8,7 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-        BackendService.init('http://192.168.0.139:8080/');
+        BackendService.init('http://localhost:8080/');
         this.state = {
             error: null,
             isLoaded: false,
